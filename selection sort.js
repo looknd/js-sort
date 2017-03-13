@@ -7,17 +7,14 @@ function swap(arr,i,j){
 function selectionSort(arr){
     let len=arr.length,
         minIndex=0;
-
-	for(let i=0;i<len;i++){
+    for(let i=0;i<len;i++){
         minIndex=i;
-
-		for(let j=i+1;j<len;j++){
+        for(let j=i+1;j<len;j++){
             if(arr[j]<arr[minIndex]){
-            	minIndex=j;
+                minIndex=j;
             }
-	    }
-
-        swap(arr,i,minIndex);
+        }
+    swap(arr,i,minIndex);
     }
     return arr;	
 };

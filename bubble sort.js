@@ -7,10 +7,10 @@ function swap(arr,i,j){
 function bubbleSort(arr){
 	let len=arr.length;
 	for(let i=0;i<len;i++){
-	    for(let j=0;j<len-i-1;j++){
-		    if(arr[j]>arr[j+1]){
-		    	swap(arr,j+1,j)
-		    }
+		for(let j=0;j<len-i-1;j++){
+			if(arr[j]>arr[j+1]){
+				swap(arr,j+1,j);
+			}
 		}
 	}
 	return arr;	
