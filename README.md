@@ -3,12 +3,13 @@
 1. **n:** 处理的数据规模
 1. **k:** “桶”的数量
 1. **In-place:** 占用常数内存，不占用额外内存
-1.** Out-place:** 需要占用额外内存
+1. **Out-place:** 需要占用额外内存
 1. **稳定性：** 排序完成后相等的键值的顺序和排序之前它们的顺序相同
 
 <img src="http://upload-images.jianshu.io/upload_images/1867034-1d3e43cdb301fc9b.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt="">
 
-# [排序的动态图（效果特别好）](https://visualgo.net/sorting)https://visualgo.net/sorting
+# [排序的动态图（效果特别好） https://visualgo.net/sorting](https://visualgo.net/sorting)
+
 ## 冒泡排序（Bubble Sort）
 冒泡排序其实很简单，也很容易明白，就是遍历数组，重复地走访要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越大的元素会经由交换慢慢“浮”到数列的顶端。
 
@@ -104,7 +105,7 @@ function insertionSort(arr){
 
 
 ## 希尔排序（Shell Sort）
-插入排序的升级版，有间隔的插入，然后间隔逐渐减小至0，即完成排除。
+插入排序的升级版，有间隔的插入，然后间隔逐渐减小至0，即完成排序。
 
 ```
 function shellSort(arr){
@@ -301,7 +302,7 @@ function countingSort(arr) {
 }
 ```
 
-[参考文档 http://www.jianshu.com/p/1b4068ccd505](http://www.jianshu.com/p/1b4068ccd505);
+## [参考文档 http://www.jianshu.com/p/1b4068ccd505](http://www.jianshu.com/p/1b4068ccd505);
 
 
 
