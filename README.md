@@ -240,8 +240,31 @@ function heapSort(arr){
 }
 ```
 
+## 计数排序（Counting Sort）
 
-# ......
+```
+function countingSort(arr) {
+
+    let arrLen = arr.length,
+        box = [], 
+        bucket = [];
+
+    for (let i = 0; i < arrLen; i++) {
+        box[i]=-1;
+        for (let j = 0; j < arrLen; j++) {
+            if(arr[i]>=arr[j]){
+                box[i]++;
+            }
+        }
+    }
+
+    for (let i = 0; i < arrLen; i++) {
+        bucket[box[i]]=arr[i]
+    }
+
+    return bucket;
+}
+```
 
 
 
