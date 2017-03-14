@@ -8,9 +8,13 @@
 
 <img src="http://upload-images.jianshu.io/upload_images/1867034-1d3e43cdb301fc9b.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt="">
 
-
+# [排序的动态图（效果特别好）](https://visualgo.net/sorting)https://visualgo.net/sorting
 ## 冒泡排序（Bubble Sort）
+冒泡排序其实很简单，也很容易明白，就是遍历数组，重复地走访要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越大的元素会经由交换慢慢“浮”到数列的顶端。
 
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-e19840224b331fae.gif?imageMogr2/auto-orient/strip" alt="">
 
 ```
 function swap(arr,i,j){
@@ -35,7 +39,11 @@ function bubbleSort(arr){
 
 
 ## 选择排序（Selection Sort）
+选择排序是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法。
 
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-c6cc220cfb2b9ac8.gif?imageMogr2/auto-orient/strip" alt="">
 
 ```
 function swap(arr,i,j){
@@ -67,7 +75,11 @@ function selectionSort(arr){
 ```
 
 ## 插入排序（Insertion Sort）
+插入排序从数组第二个元素开始跟前面的元素进行比较大小，如果比前者小则把前者往后推，直到遇到比他小的元素停止，然后插入进数组中，将所有元素循环一遍结束。
 
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-d1537e355abdd298.gif?imageMogr2/auto-orient/strip" alt="">
 
 ```
 function insertionSort(arr){
@@ -92,7 +104,7 @@ function insertionSort(arr){
 
 
 ## 希尔排序（Shell Sort）
-
+插入排序的升级版，有间隔的插入，然后间隔逐渐减小至0，即完成排除。
 
 ```
 function shellSort(arr){
@@ -121,7 +133,13 @@ function shellSort(arr){
 
 
 ## 归并排序（Merge Sort）
+归并排序是将数组用二分法分开，直到分成单个元素为止，然后再逐级合并排列好的元素，直到合并为原来长度为止。
 
+归并排序（MERGE-SORT）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。
+
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-18c70f637b5c01c2.gif?imageMogr2/auto-orient/strip" alt="">
 
 ```
 function mergeSort(arr){
@@ -164,7 +182,13 @@ function merge(left,right){
 
 
 ## 快速排序（Quick Sort）
+快速排序就是在数组中随便选一个元素，然后把小于这个元素的数放在一个数组中，大于的放入另一个数组中，然后递归分出来的两个数组做同样的操作，最后把所有结果合并。
 
+通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。
+
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-cd65e35d7dce5045.gif?imageMogr2/auto-orient/strip" alt="">
 
 ```
 function quickSort(arr){
@@ -190,6 +214,11 @@ function quickSort(arr){
 
 
 ## 堆排序（Heap Sort）
+堆排序要理解绝对二叉树，子节点是 2*i+1 和 2*i+2，父节点是（i-1）/2 js中要向下取整哦。基本思想就是每组二叉树，三个元素把大的放到顶上，小的两个放子节点上，然后遍历完成后，再把最顶上的元素依次跟最后一个元素调换，每次调换之后要把顶上的二叉树调整好顺序，保证最顶上的最大，如果需要变更顺序，要把被调换的那元素所在二叉树调整顺序，直到最顶上元素没有可调换对象为止。
+
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-bf2472770e2258a9.gif?imageMogr2/auto-orient/strip" alt="">
 
 
 ```
@@ -241,6 +270,12 @@ function heapSort(arr){
 ```
 
 ## 计数排序（Counting Sort）
+计数排序就是在另一个数组中记录小于遍历到的元素的个数，直到所有元素便利完成，另一个数组中的数就是数组的正确顺序，存起即可。
+
+### 效果图
+
+<img src="http://upload-images.jianshu.io/upload_images/1867034-14067a57dd338fe3.gif?imageMogr2/auto-orient/strip" alt="">
+
 
 ```
 function countingSort(arr) {
@@ -265,6 +300,8 @@ function countingSort(arr) {
     return bucket;
 }
 ```
+
+[参考文档 http://www.jianshu.com/p/1b4068ccd505](http://www.jianshu.com/p/1b4068ccd505);
 
 
 
